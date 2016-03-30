@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CampusHunt.master.cs" Inherits="CampusHunt.CampusHunt" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head runat="server">
+<title>Campus Hunt</title>
+<asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="Stylesheet" type="text/css" href="optimistic.css" />
+<!--[if lte IE 6]>
+	<script type="text/javascript" language="javascript" src="iehover.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<form id="form1" runat="server">
+<div id="container">
+  <div id="header">
+    <h1>
+      <!-- YOUR WEBSITE NAME -->
+    Campus Hunt
+      <!-- YOUR WEBSITE NAME END -->
+    </h1>
+    <!-- TOP MENU -->
+    <ul id="mainmenu">
+      <li class="active"><a href="Home.aspx"><span>Home</span></a></li>
+     <li class="active"><a href="About Us.aspx"><span>About Us</span></a></li>
+      <li class="active"><a href="contact.aspx"><span>Contact</span></a></li>
+      <li><a href="CollegeTree.aspx"><span>CollegeTree</span></a> </li>
+      <li>
+       <asp:LinkButton ID="lnkLogin" runat="server" Text="<span>Login</span>" PostBackUrl="~/Login.aspx" CausesValidation="false" ></asp:LinkButton></li>
+      <li><asp:LinkButton ID="lnkLogout" runat="server" Text="<span>Logout<span>" Visible="false"  
+              CausesValidation="false" onclick="lnkLogout_Click"
+              ></asp:LinkButton> </li>
+    </ul>
+    <!-- TOP MENU END -->
+  </div>
+  <div id="content">
+    <div>
+      <!-- CONTENT START -->
+      <h2>Welcom to Campus Hunt</h2>
+        <aj1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+        </aj1:ToolkitScriptManager>
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+   
+      <!-- CONTENT END -->
+    </div>
+  </div>
+  <div id="column">
+    <div>
+      <!-- NAVIGATION START -->
+      <h3>About...</h3>
+      <p>You can write something here if you like. Or put a cam, or shoutbox. <a href="http://www.free-css.com/">A link</a>.</p>
+      <asp:Panel ID="pnladmin" runat="server" Visible="false">
+      <h3>You Can</h3>
+      <ul class="menu">
+        <li><a href="ManageDept.aspx">Manage Dept</a> </li>
+           <li><a href="ManageSubject.aspx">Manage Subject</a> </li>
+        <li><a href="ManageStudents.aspx">Manage Students</a> </li>
+        <li><a href="ManageFaculty.aspx">Manage Faculty</a> </li>
+        <li><a href="ManageActivity.aspx">Manage Activity</a> </li>
+     <li><a href="AssignSubject.aspx">Assign Subject</a> </li>
+      </ul>
+      </asp:Panel>
+      <asp:Panel ID="pnlfaculty" runat="server" Visible="false">
+      <h3>You Can</h3>
+      <ul class="menu">    
+        <li><a href="ManageMarks.aspx">Manage Marks</a> </li>
+        <li><a href="ChangePassword.aspx">Change Password</a> </li>
+      </ul>
+      </asp:Panel>
+      <asp:Panel ID="pnlStudent" runat="server" Visible="false">
+      <h3>You Can</h3>
+      <ul class="menu">
+        <li><a href="ViewStudentDetails.aspx">View StudentDetails</a> </li>
+        <li><a href="ViewMarks.aspx">View Marks</a> </li>
+        <li><a href="ChangePassword.aspx">Change Password</a> </li>
+
+      </ul>
+      </asp:Panel>
+      <!-- NAVIGATION END -->
+    </div>
+  </div>
+  <div id="footer">
+    <p>
+      <!-- COPYRIGHT INOFRMATION -->
+      Content &copy; 2006 <a href="http://www.free-css.com/">Your Name</a>.
+      <!-- COPYRIGHT INOFRMATION END -->
+      Design &copy; <a href="http://inobscuro.com/">nel`chee</a>. <a href="http://creativecommons.org/licenses/by-nc-nd/2.5/">Creative Commons Licence</a> </p>
+  </div>
+</div>
+    </form>
+</body>
+</html>
